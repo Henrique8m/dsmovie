@@ -19,6 +19,12 @@ public class Score implements Serializable{
 		
 	}
 	
+	public Score(Movie movie, User user, Double value) {
+		id.setMovie(movie);
+		id.setUser(user);
+		this.value = value;
+	}
+	
 	public void setMovie(Movie movie) {
 		id.setMovie(movie);
 	}
