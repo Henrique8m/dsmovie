@@ -39,10 +39,14 @@ function Listing() {
         })
     }, [pageNumber]);
 
+    const handlePageChange = (newPageNumber : number ) => {
+        setPageNumber(newPageNumber);
+    }
+
     //NOTA: em uma renderização dinâmica de coleção, cada elemento renderizado DEVE possuir um atributo key
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={ handlePageChange }/>
 
             <div className="container">
                 <div className="row">
